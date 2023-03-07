@@ -1,3 +1,8 @@
+
+![image](https://user-images.githubusercontent.com/80512736/223455144-6a5f9641-d854-4f9f-8543-389f7c90543f.png)
+
+Litle pomodo for study
+
 # Pomodoro
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.5.
