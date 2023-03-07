@@ -1,0 +1,131 @@
+
+  /* css pomodoro */
+
+  .timer p {
+    font-size: 10em;
+  }
+  .timer {
+    height: 100vh;
+    flex-direction:column ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  button {
+    padding: 0.1em 0.25em;
+    width: 13em;
+    height: 4.2em;
+    background-color: #212121;
+    border: 0.08em solid #fff;
+    border-radius: 0.3em;
+    font-size: 12px;
+  }
+  
+  button span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0.4em;
+    width: 8.25em;
+    height: 2.5em;
+    background-color: #212121;
+    border-radius: 0.2em;
+    font-size: 1.5em;
+    color: #fff;
+    border: 0.08em solid #fff;
+    box-shadow: 0 0.4em 0.1em 0.019em #fff;
+  }
+  
+  button span:hover {
+    cursor: pointer;
+    transition: all 0.5s;
+    transform: translate(0, 0.4em);
+    box-shadow: 0 0 0 0 #fff;
+  }
+  
+  button span:not(hover) {
+    transition: all 1s;
+  }
+  
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn ease-in 1s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+  #heading {
+    -webkit-animation: breathing 5s ease-out infinite normal;
+    animation: breathing 5s ease-out infinite normal;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;    
+    }
+
+
+@-webkit-keyframes breathing {
+  0% {
+    /* -webkit-transform: scale(0.9);
+    transform: scale(0.9); */
+    opacity: 0.6;
+  }
+
+  25% {
+    /* -webkit-transform: scale(1);
+    transform: scale(1); */
+    opacity: 0.9;
+  }
+
+  60% {
+    opacity: 0.6;
+    /* -webkit-transform: scale(0.9);
+    transform: scale(0.9); */
+  }
+
+  100% {
+    opacity: 0.6;
+    /* -webkit-transform: scale(0.9);
+    transform: scale(0.9); */
+  }
+}
+
+@keyframes breathing {
+  0% {
+    opacity: 0.6;
+    /* -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9); */
+  }
+
+  25% {
+    opacity: 0.9;
+    /* -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 0,2; */
+  }
+
+  60% {
+    opacity: 0.6;
+    /* -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9); */
+  }
+
+  100% {
+    opacity: 0.6;
+    /* -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9); */
+  }
+}
