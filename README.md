@@ -1,5 +1,5 @@
 
-![image](![image](https://user-images.githubusercontent.com/80512736/223754346-c0f475c9-2d9c-425e-9805-4e327747a4d4.png))
+![image](https://user-images.githubusercontent.com/80512736/223754434-11e90b83-ae63-48fb-8b1f-b54ce2d0b02f.png)
 
                                                        ✨Little pomodo for study✨
 
