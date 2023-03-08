@@ -1,14 +1,14 @@
 <router-outlet></router-outlet>
 
 
-
+<p style="position: fixed; top: 2%; left: 2%;">{{numOfWorkSessionsCompleted}} 💎</p>
 <div class="timer">
   <h1 id="heading" [ngClass]="{'fade-in': headingText}">{{ headingText }}</h1>
   <p>
     {{ displayTime }}
   </p>
   <div>
-    <button *ngIf="!isTimerStarted" style="margin-right: 5px;" (click)="startTimer();setRandomHeadingText()">
+    <button  *ngIf="!isTimerStarted" style="margin-right: 5px;" (click)="startTimer();setRandomHeadingText()">
       <i class="fa-solid fa-play "></i>
     </button>
     <button *ngIf="isTimerStarted" (click)="pauseTimer()">
