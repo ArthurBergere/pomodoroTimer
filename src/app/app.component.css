@@ -11,7 +11,15 @@
     align-items: center;
     justify-content: space-around;
   }
+
   button {
+    background: none;
+    border: none;
+    color: white;
+  }
+
+
+  /* button {
     padding: 0.1em 0.25em;
     width: 13em;
     height: 4.2em;
@@ -47,7 +55,7 @@
   button span:not(hover) {
     transition: all 1s;
   }
-  
+   */
   
   .fade-in {
     opacity: 0;

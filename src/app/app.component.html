@@ -1,8 +1,5 @@
 <router-outlet></router-outlet>
-<!-- <button (click)='startTimer()'>Start Timer</button>
-<button (click)='pauseTimer()'>Pause</button>
 
-<p>{{remainingTime || breakRemainingTime}} Seconds Left....</p> -->
 
 
 <div class="timer">
@@ -11,14 +8,11 @@
     {{ displayTime }}
   </p>
   <div>
-    <button style="margin-right: 5px;" (click)="startTimer();setRandomHeadingText()">
-      <span>
-        Start
-      </span>
+    <button *ngIf="!isTimerStarted" style="margin-right: 5px;" (click)="startTimer();setRandomHeadingText()">
+      <i class="fa-solid fa-play "></i>
     </button>
-    <button (click)="pauseTimer()">
-      <span>
-        Pause
-      </span>
+    <button *ngIf="isTimerStarted" (click)="pauseTimer()">
+      <i class="fa-solid fa-pause"></i>
     </button>
   </div>
+</div>

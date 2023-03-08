@@ -11,6 +11,7 @@ export class AppComponent  implements OnInit {
   remainingTime = 25 * 60 * 1000; // 25 minutes in milliseconds
   timerInterval: any;
   displayTime: string | undefined;
+  isTimerStarted = false;
   randomPhrases: string[] = [
     'Focus on your work',
     'Stay productive',
@@ -30,6 +31,7 @@ export class AppComponent  implements OnInit {
   }
 
   startTimer() {
+    this.isTimerStarted = true;
     this.headingText = "Let's start !"
     this.timerInterval = setInterval(() => {
       this.remainingTime -= 1000;
@@ -46,6 +48,7 @@ export class AppComponent  implements OnInit {
   }
 
   pauseTimer() {
+    this.isTimerStarted = false;
     if( this.remainingTime == 25 * 60 * 1000){
       this.headingText = "Why do you want to stop, it hasn't even started 😏"
     }else {
