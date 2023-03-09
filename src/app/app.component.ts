@@ -69,12 +69,8 @@ export class AppComponent  implements OnInit {
 
   pauseTimer() {
     this.isTimerStarted = false;
-    if( this.remainingTime == 25 * 60 * 1000){
-      this.headingText = "Why do you want to stop, it hasn't even started 😏"
-    }else {
       clearInterval(this.timerInterval);
       this.headingText = "You have stop your work 😰 "
-    }
     
   }
 
@@ -83,7 +79,13 @@ export class AppComponent  implements OnInit {
     const seconds = ((time % 60000) / 1000).toFixed(0);
     return `${minutes}:${Number(seconds) < 10 ? '0' : ''}${seconds}`;
   }
-
+  getProgressBarWidth(): string {
+    const totalSeconds = 25 * 60; // 25 minutes in seconds
+    const elapsedSeconds = Math.floor((totalSeconds - this.remainingTime / 1000) % totalSeconds);
+    const progressPercent = (elapsedSeconds / totalSeconds) * 100;
+    return `${progressPercent}%`;
+  }
+  
   setRandomHeadingText() {
     setInterval(() => {
       const element = document.getElementById('heading');

@@ -24,7 +24,14 @@ html {
     max-width: 100%;
     height: auto;
   }
+footer {
+  text-align: center;
+}
+footer a {
+  color: rgb(212, 186, 236);
+  text-decoration: none;
 
+}
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Tilt+Neon&display=swap');
