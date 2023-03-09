@@ -1,8 +1,10 @@
 
 ![image](https://user-images.githubusercontent.com/80512736/223754434-11e90b83-ae63-48fb-8b1f-b54ce2d0b02f.png)
 
-                                    ✨[Little pomodoro for study](https://studywithpomodoro.vercel.app)✨
+                                                ✨Little pomodoro for study✨
+                                                                               
 
+Clique pour voir la [démo](https://studywithpomodoro.vercel.app)
 
 # Pomodoro
 
