@@ -26,6 +26,12 @@ html {
   }
 footer {
   text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; 
+}
+footer:hover {
+  transition: opacity 0.5s ease-in-out; 
+  opacity: 0.7;
 }
 footer a {
   color: rgb(212, 186, 236);
@@ -42,4 +48,10 @@ body {
     font-family: 'Tilt Neon', cursive;
     background: url(./assets/wallpaper2.gif) center center fixed;
     background-size: cover;
+}
+
+@media (max-width: 500px) {
+ .timer p{
+  font-size: 6em !important;
+ }
 }

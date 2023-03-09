@@ -14,6 +14,7 @@ export class AppComponent  implements OnInit {
   numOfWorkSessionsCompleted = 0;
   displayTime: string | undefined;
   isTimerStarted = false;
+  isPause = false;
   randomPhrases: string[] = [
     'Focus on your work',
     'Stay productive',
@@ -51,11 +52,13 @@ export class AppComponent  implements OnInit {
           this.numOfWorkSessionsCompleted += 1;
           localStorage.setItem('numOfWorkSessionsCompleted', this.numOfWorkSessionsCompleted.toString());
           this.remainingTime = 5 * 60 * 1000; // 5 minutes in milliseconds
+          this.isPause = true;
           this.headingText = "Take a break!";
           this.timerInterval = setInterval(() => {
             this.remainingTime -= 1000;
             this.displayTime = this.getDisplayTime(this.remainingTime);
             if (this.remainingTime === 0) {
+              this.isPause = false;
               clearInterval(this.timerInterval);
               this.remainingTime = 25 * 60 * 1000; // 25 minutes in milliseconds
               this.displayTime = this.getDisplayTime(this.remainingTime);
@@ -89,13 +92,11 @@ export class AppComponent  implements OnInit {
   setRandomHeadingText() {
     setInterval(() => {
       const element = document.getElementById('heading');
-      if (element) {
-        element.classList.add('fade-in');
-        setTimeout(() => {
-          element.classList.remove('fade-in');
-        }, 1000);
+      if (this.isPause) {
+        this.headingText = "Take a breath"
+      }else {
+        this.headingText = this.randomPhrases[Math.floor(Math.random() * this.randomPhrases.length)];
       }
-      this.headingText = this.randomPhrases[Math.floor(Math.random() * this.randomPhrases.length)];
     }, 30000);
   }
 }
